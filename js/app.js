@@ -42,3 +42,24 @@ function showHideMenu(){
 
 
 /*3) to the thumbs down icon that will add a count (counter) for each time the icon is clicked on.*/
+
+var descripElem = document.getElementsByClassName("descrip");
+
+for(var k=0; k<descripElem.length; k++){
+	descripElem[k].addEventListener('click', clickThumb);
+}
+
+function clickThumb(){
+	var dElem = this.querySelectorAll('.thumb')[0];
+	dElem.counter
+}
+
+
+
+
+
+
+
+
+
+
