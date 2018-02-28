@@ -45,13 +45,57 @@ function showHideMenu(){
 
 var rankElem = document.getElementsByClassName("rank");
 
-for(var k=0; k<rankElem.length; k++){
+/*for(var k=0; k<rankElem.length; k++){
 	rankElem[k].addEventListener('click', countClicks);
+}*/
+
+	rankElem[0].addEventListener('click', countClicks0);
+	rankElem[1].addEventListener('click', countClicks1);
+	rankElem[2].addEventListener('click', countClicks2);
+
+var numClicks0= 0;
+var numClicks1 = 0;
+var numClicks2 = 0;
+var count0 = document.createElement('p');
+var count1 = document.createElement('p');
+var count2 = document.createElement('p');
+
+function countClicks0() {
+	numClicks0 += 1;
+
+	var thumbElem0 = this.querySelector('.thumb');
+	count0.id = 'count1';
+	count0.innerHTML = numClicks0;
+	var thumbParent0 = document.getElementsByClassName('thumb');
+	thumbParent0[0].appendChild(count0);
+
+}
+
+function countClicks1() {
+	numClicks1 += 1;
+
+	var thumbElem1 = this.querySelector('.thumb');
+	count1.id = 'count1';
+	count1.innerHTML = numClicks1;
+	var thumbParent1 = document.getElementsByClassName('thumb');
+	thumbParent1[1].appendChild(count1);	
+
+}
+
+function countClicks2() {
+
+	numClicks2 += 1;
+	var thumbElem2 = this.querySelector('.thumb');
+
+	count2.id = 'count1';
+	count2.innerHTML = numClicks2;
+	var thumbParent2= document.getElementsByClassName('thumb');
+	thumbParent2[2].appendChild(count2);
 }
 
 
 
-var numClicks= 0;
+/*var numClicks= 0;
 var count = document.createElement('p');
 
 function countClicks(){
@@ -64,7 +108,7 @@ function countClicks(){
 	count.innerHTML = numClicks;
 	var thumbParent = document.getElementsByClassName('thumb');
 	thumbParent[0].appendChild(count);
-}
+}*/
 
 
 
